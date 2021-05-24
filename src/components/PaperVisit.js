@@ -2,8 +2,6 @@ import React from "react";
 import { Container, Paper, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import KeyboardArrowRightRoundedIcon from "@material-ui/icons/KeyboardArrowRightRounded";
-import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
-import AccessibilityIcon from "@material-ui/icons/Accessibility";
 import { withStyles } from "@material-ui/styles";
 import Visits from "../assets/Visits.png";
 import vitals from "../assets/vitals.png";

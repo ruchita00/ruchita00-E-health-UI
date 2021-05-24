@@ -116,7 +116,7 @@ const Home = (props) => {
         {/* <div className={classes.past_3_months_button}>Past 3 months</div> */}
         {/* <ExpandMoreIcon className={classes.expand_icon} /> */}
 
-        <Monthdropdown classes={{Monthdropdown:classes.DropdownMenu}} />
+        <Monthdropdown  />
       </button>
       <DropdownMenu  />
 <Congratulations />

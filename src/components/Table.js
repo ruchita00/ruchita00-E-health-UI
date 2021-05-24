@@ -41,11 +41,12 @@ const useStyles = makeStyles({
   //   display: "flex",
   // },
   sorticon:{
-    width:'24px',height:'16px',left:'433px',top:'328px'
+    width:'24px',height:'16px',left:'430px',top:'328px'
               ,fontWeight:'400'
   },
   text:{
-    width:'40px',height:'24px'
+    width:'40px',height:'24px',
+    padding:'10px'
   }
 });
 
@@ -74,7 +75,7 @@ export default function BasicTable() {
               <span className={classes.text}>Name</span>
               <SortIcon className={classes.sorticon} />
             </TableCell>
-            
+
             <TableCell  className={classes.tableRightBorder} align="center">
               <span className={classes.text}>Start Date</span>
               <SortIcon className={classes.sorticon} />

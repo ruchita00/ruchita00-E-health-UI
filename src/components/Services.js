@@ -3,7 +3,7 @@ import { withStyles } from "@material-ui/core";
 import TabServices from "./TabServices"
 import {Divider} from "@material-ui/core"
 import Typography from "@material-ui/core/Typography"
-
+import coverage from "../assets/coverage.png"
 
 const style = (theme) => ({
     root:{
@@ -29,7 +29,6 @@ const style = (theme) => ({
         fontSize: "28px",
         lineHeight: "32px",
         display: "flex",
-        // alignItems: "center",
         color: "#000000",
       },
    divide:{
@@ -37,6 +36,10 @@ const style = (theme) => ({
     position:'absolute',
     height:'30px',
     top:'60px'
+  },img:{
+    position:'static',
+    marginRight:'16px'
+    ,marginLeft:'-50px'
   }
   
 });
@@ -50,8 +53,13 @@ const Services = (props) => {
       Services / Coverage / medicare Advantage -Dental-MADL0977
 </Typography>
 
-<Typography className={classes.sub} variant="h5" component="h2">
-Medicare Advantage -Dental-MADL0977
+<Typography 
+className={classes.sub} 
+variant="h5" component="h2">
+  <img src={coverage}
+    className={classes.img} 
+    alt="coverage-img" /> 
+      Medicare Advantage -Dental-MADL0977
 </Typography>
   <TabServices /> 
     <Divider className={classes.divide} /> 

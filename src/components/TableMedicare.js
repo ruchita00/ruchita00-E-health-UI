@@ -183,7 +183,7 @@ export default function TableMedicare() {
              <InfoRoundedIcon style={{top:'540px'}} className={classes.icon} />              
             </TableCell>
 
-            <TableCell align="left" className={classes.tableRightBorder}>
+            <TableCell style={{width:'600px'}} align="left" className={classes.tableRightBorder}>
         YES
             </TableCell>
           

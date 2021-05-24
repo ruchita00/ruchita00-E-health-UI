@@ -4,21 +4,21 @@ import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 
-// const useStyles = makeStyles(
-//   (theme) =>
-//     createStyles({
-//       smallRadioButton: {
-//         "& svg": {
-//           width: "0.7em",
-//           height: "0.7em",
-//           verticalAlign: "center",
-//        color: '#036FCB'
+const useStyles = makeStyles(
+  (theme) =>
+    createStyles({
+      smallRadioButton: {
+        "& svg": {
+        //   width: "0.7em",
+        //   height: "0.7em",
+        //   verticalAlign: "center",
+       color: '#036FCB'
 
-//         },
-//       },
-//     })
+        },
+      },
+    })
   
-// );
+);
 
 function ButtonRadio(props) {
   // const classes = useStyles();

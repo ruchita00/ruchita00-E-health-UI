@@ -8,17 +8,16 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { Drawer, List, ListItem, ListItemText } from "@material-ui/core";
 import title from "../src/assets/title.png";
-import home from "../src/assets/home.png";
-import download from "../src/assets/download.png";
-import utilities from "../src/assets/utilities.png";
-import circles from "../src/assets/circles.png";
 import Services from "./components/Services";
 import Header from "./components/Header.js";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 import Home from "./components/Home"
 import Utilities from "./components/Utilities"
 import Circles from "./components/Circles"
-
+import icon_M from "../src/assets/icon_M.png"
+import Navicon from "../src/assets/Navicon.png"
+import Serv from "../src/assets/Serv.png"
+import Util from "../src/assets/Util.png"
 
 const theme = createMuiTheme({
   palette: {
@@ -27,7 +26,7 @@ const theme = createMuiTheme({
       light: "#f8324526",
     },
     background: {
-      default: "#eeeeee",
+      default: "#f5f5f5",
     },
   },
 });
@@ -46,72 +45,9 @@ const useStyles = makeStyles((theme) => ({
 
   },
 
-  home: {
-    position: "absolute",
-    left: "88px",
-    opacity:'87%',
-    right: "53.75%",
-    width:'51px',
-    height:'24px',
-    top: "3.25%",
-    bottom: "1.25%",
-    fontWeight: 500,
-    lineHeight: "24px",
-    fontSize: "16px",
-    display: "flex",
-    alignItems: "center",
-    color: "#4B4B4B",
-    mixBlendMode: "normal",
-    // opacity: "0.87",
-  },
-  Circles: {
-    position: "absolute",
-    left: "27.5%",
-    right: "53.75%",
-    top: "-33.25%",
-    bottom: "31.25%",
-    fontWeight: 500,
-    fontSize: "16px",
-    lineHeight: "24px",
-    display: "flex",
-    alignItems: "center",
-    color: "#4B4B4B",
-    mixBlendMode: "normal",
-    opacity: "0.87",
-  },
-  Services: {
-    position: "absolute",
-    left: "27.5%",
-    right: "53.75%",
-    top: "-23.25%",
-    bottom: "31.25%",
-    fontWeight: 500,
-    fontSize: "16px",
-    lineHeight: "24px",
-    display: "flex",
-    alignItems: "center",
-    color: "#4B4B4B",
-    mixBlendMode: "normal",
-    opacity: "0.87",
-  },
-  Utilities: {
-    position: "absolute",
-    left: "27.5%",
-    right: "53.75%",
-    top: "-13.25%",
-    bottom: "31.25%",
-    fontWeight: 500,
-    fontSize: "16px",
-    lineHeight: "24px",
-    display: "flex",
-    alignItems: "center",
-    color: "#4B4B4B",
-    mixBlendMode: "normal",
-    opacity: "0.87",
-  },
+  
   img: {
-    width: "30px",
-    padding: "5px",
+    position:'absolute',width:'24px',height:'24px',top:'5px',left:'44px'
   },
   listitemtext: {
     padding: "5px",
@@ -127,6 +63,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "90px",
     marginBottom:"-50px"
   },
+  textlink:{
+    position:'absolute',width:'51px',height:'24px',top:'0px',left:'88px'
+  }
 }));
 function App() {
   const classes = useStyles();
@@ -154,56 +93,57 @@ function App() {
                   <ListItemText></ListItemText>
                 </ListItem>
 
-                <Link to="/home" className={classes.link}>
+                <Link to="/home" 
+                
+                className={classes.link}>
                   <ListItem button className={classes.linkelements}>
                     <img
-                      src={home}
+                      src={icon_M} 
                       alt="home-img"
                       className={classes.img}
                     />
-                    <ListItemText
+                    <ListItemText 
                       primary={"Home"}
-                      className={classes.listitemtext}
+                className={classes.textlink}  
+                
+                    
                     />
                   </ListItem>
                 </Link>
                 <Link to="/circles" className={classes.link}>
                   <ListItem button className={classes.linkelements}>
                     <img
-                      src={circles}
+                      src={Navicon}
                       alt="circle-img"
                       className={classes.img}
                     />
                     <ListItemText 
                       primary={"Circles"}
-                      className={classes.listitemtext}
-                    />
+                      className={classes.textlink}                    />
                   </ListItem>
                 </Link>
                 <Link to="/services" className={classes.link}>
                   <ListItem button className={classes.linkelements}>
                     <img
-                      src={download}
+                      src={Serv}
                       alt="services-img"
                       className={classes.img}
                     />
                     <ListItemText
                       primary={"Services"}
-                      className={classes.listitemtext}
-                    />
+                      className={classes.textlink}                    />
                   </ListItem>
                 </Link>
                 <Link to="/utilities" className={classes.link}>
                   <ListItem button className={classes.linkelements}>
                     <img
-                      src={utilities}
+                      src={Util}
                       alt="utilities-img"
                       className={classes.img}
                     />
                     <ListItemText
                       primary={"Utilities"}
-                      className={classes.listitemtext}
-                    />
+                      className={classes.textlink}                    />
                   </ListItem>
                 </Link>
               </List>

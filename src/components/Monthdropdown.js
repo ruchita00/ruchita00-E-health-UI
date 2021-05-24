@@ -31,6 +31,7 @@ const colourStyles = {
       left: "-6px",
       top: "-20px",
       height:'40px',
+
     //   marginLeft:'12px',
           background: "#ffffff",
     //   marginTop:'256px',
@@ -68,10 +69,10 @@ const colourStyles = {
   },
 
   input: (styles) => {
-    return { ...styles };
+    return { ...styles, };
   },
   placeholder: (styles) => {
-    return { ...styles };
+    return { ...styles, };
   },
   singleValue: (styles, { data }) => {
     return { ...styles };
@@ -81,21 +82,23 @@ const data = [
   {
     value: "1",
     label: "Past 3 months",
+    
   },
   {
     value: "2",
-    label: "Past 6 months",
+    label: "Past 3 months",
+    // color: "#27AE60",
   },
   {
     value: "3",
     label: "Past 9 months",
-
+    // color: "#F2994A",
   },
 ];
 const Option = (props) => {
   console.log("props", props);
   const { data, isSelected, innerRef, innerProps } = props;
-  const { label, value } = data;
+  const { color, label, value } = data;
 
   return (
     <div
@@ -119,7 +122,7 @@ const Option = (props) => {
             borderRadius: "5px",
             margin:'10px',
             verticalAlign:'center',
-            // backgroundColor: color,
+            backgroundColor: color,
           }}
         ></div>
       )}

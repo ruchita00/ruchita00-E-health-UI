@@ -6,7 +6,7 @@ import InfoRoundedIcon from "@material-ui/icons/InfoRounded";
 
 const style = (theme) => ({
   tab: {
-    paddingTop: theme.spacing(30),
+    paddingTop: theme.spacing(33),
     left: "361px",
     top: "272px",
   },

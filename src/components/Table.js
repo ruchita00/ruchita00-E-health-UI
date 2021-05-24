@@ -72,14 +72,15 @@ export default function BasicTable() {
           <TableRow>
             <TableCell className={classes.tableRightBorder}>
               <span className={classes.text}>Name</span>
-              <SortIcon className={classes.sorticon}
-    
-               />
+              <SortIcon className={classes.sorticon} />
             </TableCell>
+            
             <TableCell  className={classes.tableRightBorder} align="center">
               <span className={classes.text}>Start Date</span>
               <SortIcon className={classes.sorticon} />
             </TableCell>
+
+
             <TableCell  className={classes.tableRightBorder} align="center">
               <span className={classes.text}>Expiry Date</span>
 

@@ -15,28 +15,38 @@ const useStyles = makeStyles({
       width:"1024px",
       height:'96px',
       top:'312px',
+      // borderTopWidth:'6',
+      // borderColor:'#E4E4E4',
+      // borderSideWidth:'6',
+      // borderBottomWidth:'6',
+      // borderTopWidth:'1',
+
       left:'360px',
       borderRadius:'16px',
       border:'1px solid #E4E4E4',background:'#FFFFFF'
   },
-//   sorticon: {
-//     position: "relative",
-//     width: "97px",
-//     height: "22px",
-//     left: "2px",
-//     top: "-22px",
-//     fontSize: "24px",
-//     display: "flex",
-//   },
-//   sorticon1: {
-//     position: "relative",
-//     width: "97px",
-//     height: "22px",
-//     left: "150px",
-//     top: "-22px",
-//     fontSize: "24px",
-//     display: "flex",
-//   },
+  tableRightBorder:{
+    borderWidth:1.5,
+    borderRadius:'16px',
+    borderColor:'#E4E4E4',
+    borderStyle:'solid'
+  },
+  // sorticon: {
+  //   position: "relative",
+  //   width: "97px",
+  //   height: "22px",
+  //   left: "2px",
+  //   top: "-22px",
+  //   fontSize: "24px",
+  //   display: "flex",
+  // },
+  sorticon:{
+    width:'24px',height:'16px',left:'433px',top:'328px'
+              ,fontWeight:'400'
+  },
+  text:{
+    width:'40px',height:'24px'
+  }
 });
 
 function createData(name, startdate, expirydate, status) {
@@ -60,33 +70,37 @@ export default function BasicTable() {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>
-              Name
-              {/* <SortIcon className={classes.sorticon} /> */}
+            <TableCell className={classes.tableRightBorder}>
+              <span className={classes.text}>Name</span>
+              <SortIcon className={classes.sorticon}
+    
+               />
             </TableCell>
-            <TableCell align="right">
-              Start Date
-              {/* <SortIcon className={classes.sorticon1} /> */}
+            <TableCell  className={classes.tableRightBorder} align="center">
+              <span className={classes.text}>Start Date</span>
+              <SortIcon className={classes.sorticon} />
             </TableCell>
-            <TableCell align="right">
-              Expiry Date
-              {/* <SortIcon className={classes.sorticon1} /> */}
+            <TableCell  className={classes.tableRightBorder} align="center">
+              <span className={classes.text}>Expiry Date</span>
+
+              <SortIcon className={classes.sorticon} />
             </TableCell>
-            <TableCell align="right" >
-              Status
+            <TableCell  className={classes.tableRightBorder} align="center" >
+            <span className={classes.text}>Status</span>
+
             </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
+              <TableCell  className={classes.tableRightBorder} component="th" scope="row">
                 {row.name}
               </TableCell>
 
-              <TableCell align="right">{row.startdate}</TableCell>
-              <TableCell align="right">{row.expirydate}</TableCell>
-              <TableCell align="right">{row.status}</TableCell>
+              <TableCell  className={classes.tableRightBorder} align="center">{row.startdate}</TableCell>
+              <TableCell  className={classes.tableRightBorder} align="center">{row.expirydate}</TableCell>
+              <TableCell  className={classes.tableRightBorder}  align="center">{row.status}</TableCell>
             </TableRow>
           ))}
         </TableBody>

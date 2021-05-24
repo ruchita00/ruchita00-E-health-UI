@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography"
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import DropdownMenu from "./DropdownMenu"
 import Table from "./Table"
+import Monthdropdown from "./Monthdropdown";
 
 
 const style = (theme) => ({
@@ -112,10 +113,12 @@ const Home = (props) => {
   Coverage
 </Typography>
 <button className={classes.container}>
-        <div className={classes.past_3_months_button}>Past 3 months</div>
-        <ExpandMoreIcon className={classes.expand_icon} />
+        {/* <div className={classes.past_3_months_button}>Past 3 months</div> */}
+        {/* <ExpandMoreIcon className={classes.expand_icon} /> */}
+
+        <Monthdropdown classes={{Monthdropdown:classes.DropdownMenu}} />
       </button>
-      <DropdownMenu classes={{DropdownMenu:classes.DropdownMenu}} />
+      <DropdownMenu  />
 <Congratulations />
 <div className={classes.newtable}>
 <span className={classes.name}>Name</span>

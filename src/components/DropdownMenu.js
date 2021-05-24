@@ -33,7 +33,7 @@ const colourStyles = {
       marginLeft:'12px',
           background: "#ffffff",
       marginTop:'256px',
-      border: "1px solid #036FCB",
+      // border: "1px solid #036FCB",
       // padding:'1px',
       boxSizing: "border-box",
       boxShadow: "0px 2px 10px rgba(0,0,0,0.08)",

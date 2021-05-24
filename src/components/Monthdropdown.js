@@ -26,14 +26,15 @@ const colourStyles = {
       ...styles,
     //   backgroundColor: "white",
       position: "absolute",
-      width: "112px",
+      width: "145px",
     //   height: "40px",
-      left: "190px",
-      top: "1px",
-      marginLeft:'12px',
+      left: "-6px",
+      top: "-20px",
+      height:'40px',
+    //   marginLeft:'12px',
           background: "#ffffff",
-      marginTop:'256px',
-      border: "1px solid #036FCB",
+    //   marginTop:'256px',
+    //   border: "1px solid #036FCB",
       // padding:'1px',
       boxSizing: "border-box",
       boxShadow: "0px 2px 10px rgba(0,0,0,0.08)",
@@ -67,41 +68,34 @@ const colourStyles = {
   },
 
   input: (styles) => {
-    return { ...styles, ...dot() };
+    return { ...styles };
   },
   placeholder: (styles) => {
-    return { ...styles, ...dot() };
+    return { ...styles };
   },
   singleValue: (styles, { data }) => {
-    return { ...styles, ...dot(data.color) };
+    return { ...styles };
   },
 };
 const data = [
   {
     value: "1",
-    label: "All Status",
-    color: "white",
+    label: "Past 3 months",
   },
   {
     value: "2",
-    label: "Active",
-    color: "#27AE60",
+    label: "Past 6 months",
   },
   {
     value: "3",
-    label: "Pending",
-    color: "#F2994A",
-  },
-  {
-    value: "4",
-    label: "Past",
-    color: "#DB0032",
+    label: "Past 9 months",
+
   },
 ];
 const Option = (props) => {
   console.log("props", props);
   const { data, isSelected, innerRef, innerProps } = props;
-  const { color, label, value } = data;
+  const { label, value } = data;
 
   return (
     <div
@@ -125,7 +119,7 @@ const Option = (props) => {
             borderRadius: "5px",
             margin:'10px',
             verticalAlign:'center',
-            backgroundColor: color,
+            // backgroundColor: color,
           }}
         ></div>
       )}

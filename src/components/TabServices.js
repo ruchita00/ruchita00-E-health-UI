@@ -1,5 +1,5 @@
 import React from "react";
-import { Tabs, Tab, withStyles, Divider } from "@material-ui/core";
+import { Tabs, Tab, withStyles} from "@material-ui/core";
 import TableMedicare from "./TableMedicare";
 
 const style = (theme) => ({

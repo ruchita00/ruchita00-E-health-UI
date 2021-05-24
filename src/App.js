@@ -19,6 +19,7 @@ import Navicon from "../src/assets/Navicon.png"
 import Serv from "../src/assets/Serv.png"
 import Util from "../src/assets/Util.png"
 
+
 const theme = createMuiTheme({
   palette: {
     secondary: {
@@ -30,6 +31,7 @@ const theme = createMuiTheme({
     },
   },
 });
+
 
 const useStyles = makeStyles((theme) => ({
   drawerPaper: { width: "inherit", },
@@ -47,7 +49,8 @@ const useStyles = makeStyles((theme) => ({
 
   
   img: {
-    position:'absolute',width:'24px',height:'24px',top:'5px',left:'44px'
+    position:'absolute',width:'24px',height:'24px',
+    top:'5px',left:'10px'
   },
   listitemtext: {
     padding: "5px",
@@ -56,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   linkelements: {
-    left: "50px",
+    left: "60px",
     top: "10px",
     height: "10px",
     width: "10px",
@@ -90,7 +93,7 @@ function App() {
               <List>
                 <ListItem>
                   <img src={title} alt="title-img" className={classes.title} />
-                  <ListItemText></ListItemText>
+                
                 </ListItem>
 
                 <Link to="/home" 
@@ -102,7 +105,7 @@ function App() {
                       alt="home-img"
                       className={classes.img}
                     />
-                    <ListItemText 
+                    <ListItemText  style={{left:'55px'}}
                       primary={"Home"}
                 className={classes.textlink}  
                 
@@ -117,7 +120,7 @@ function App() {
                       alt="circle-img"
                       className={classes.img}
                     />
-                    <ListItemText 
+                    <ListItemText style={{left:'55px'}}
                       primary={"Circles"}
                       className={classes.textlink}                    />
                   </ListItem>
@@ -129,7 +132,7 @@ function App() {
                       alt="services-img"
                       className={classes.img}
                     />
-                    <ListItemText
+                    <ListItemText style={{left:'55px'}}
                       primary={"Services"}
                       className={classes.textlink}                    />
                   </ListItem>
@@ -138,10 +141,10 @@ function App() {
                   <ListItem button className={classes.linkelements}>
                     <img
                       src={Util}
-                      alt="utilities-img"
+                      alt="utilities-img" 
                       className={classes.img}
                     />
-                    <ListItemText
+                    <ListItemText style={{left:'55px'}}
                       primary={"Utilities"}
                       className={classes.textlink}                    />
                   </ListItem>

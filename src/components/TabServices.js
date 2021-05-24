@@ -6,7 +6,7 @@ import InfoRoundedIcon from "@material-ui/icons/InfoRounded";
 
 const style = (theme) => ({
   tab: {
-    paddingTop: theme.spacing(33),
+    paddingTop: theme.spacing(30),
     left: "361px",
     top: "272px",
   },
@@ -89,162 +89,12 @@ const TabServices = (props) => {
       </Tabs>
 
       <TabPanel value={value} index={0}>
-        <div className={classes.row1}>
-          <div className={classes.textright}>
-            Medicare Adavantage (Local PPO)
-          </div>
-          <div className={classes.text}>
-            Plan Type
-            <InfoRoundedIcon className={classes.icon} />{" "}
-          </div>
-        </div>
-
-        <div className={classes.row1}>
-          <div className={classes.textright}>
-            This plan does not have a medical deductible.
-          </div>
-          <div className={classes.text}>
-            Annual In-Network Deductible
-            <InfoRoundedIcon className={classes.icon} />{" "}
-          </div>
-        </div>
-
-        <div className={classes.row1}>
-          <div className={classes.textright}>
-            This plan does not have a medical deductible.
-          </div>
-          <div className={classes.text}>
-            Annual Out-of-Network Deductible
-            <InfoRoundedIcon
-              className={classes.icon}
-              style={{ position: "absolute", left: "250px", top: "15px" }}
-            />
-          </div>
-        </div>
-
-        <div
-          style={{ height: "45px", lineHeight: "15px" }}
-          className={classes.row1}
-        >
-          <div className={classes.textright}>
-            $7550 for services you receive from in-network Providers,$11300 for
-            services you
-            <br /> receive from any provider.
-          </div>
-
-          <div style={{ height: "72px" }} className={classes.text}>
-            Out-of-Pocket Maximum
-            <InfoRoundedIcon
-              className={classes.icon}
-              style={{ position: "absolute", left: "180px", top: "15px" }}
-            />
-          </div>
-        </div>
-
-        <div className={classes.row1}>
-          <div className={classes.textright}>
-            In-network: $0 copay <br />
-             Out-of-network: $0 copay
-          </div>
-          <div className={classes.text}>
-            Office Visit for Primary Doctor
-            <InfoRoundedIcon
-              className={classes.icon}
-              style={{ position: "absolute", left: "225px", top: "15px" }}
-            />
-          </div>
-        </div>
-
-        <div className={classes.row1}>
-          <div className={classes.textright}>YES</div>
-          <div className={classes.text}>
-            Prescription Drug Coverage
-            <InfoRoundedIcon
-              className={classes.icon}
-              style={{ position: "absolute", left: "210px", top: "16px" }}
-            />
-          </div>
-        </div>
-
-        <div className={classes.row1}>
-          <div className={classes.textright}>YES</div>
-          <div className={classes.text}>
-            Dental Services
-            <InfoRoundedIcon
-              className={classes.icon}
-              style={{ position: "absolute", left: "130px", top: "16px" }}
-            />
-          </div>
-        </div>
-
-        <div className={classes.row1}>
-          <div className={classes.textright}>YES</div>
-          <div className={classes.text}>
-            Vision Services
-            <InfoRoundedIcon
-              className={classes.icon}
-              style={{ position: "absolute", left: "125px", top: "16px" }}
-            />
-          </div>
-        </div>
-
-        <div className={classes.row1}>
-          <div className={classes.textright}>YES</div>
-          <div className={classes.text}>
-            Hearing Services
-            <InfoRoundedIcon
-              className={classes.icon}
-              style={{ position: "absolute", left: "135px", top: "16px" }}
-            />
-          </div>
-        </div>
-
-        <div className={classes.row1}>
-          <div className={classes.textright}>YES</div>
-          <div className={classes.text}>
-            Over-the-Counter Benefits
-            <InfoRoundedIcon
-              className={classes.icon}
-              style={{ position: "absolute", left: "200px", top: "15px" }}
-            />
-          </div>
-        </div>
-
-        <div className={classes.row1}>
-          <div className={classes.textright}>YES</div>
-          <div className={classes.text}>
-            Fitness Benefits
-            <InfoRoundedIcon
-              className={classes.icon}
-              style={{ position: "absolute", left: "130px", top: "15px" }}
-            />
-          </div>
-        </div>
-
-        <div className={classes.row1}>
-          <div className={classes.textright}>YES</div>
-
-          <div className={classes.text}>
-            Transportation Services
-            <InfoRoundedIcon
-              style={{ position: "absolute", left: "180px", top: "16px" }}
-              className={classes.icon}
-            />
-          </div>
-
-          <div className={classes.rowlast}>
-            {" "}
-            <div className={classes.textright}>YES</div>
-            <div className={classes.text}>
-              Telehealth Services
-              <InfoRoundedIcon
-                style={{ position: "absolute", left: "150px", top: "65px" }}
-                className={classes.icon}
-              />
-            </div>
-          </div>
-        </div>
-      </TabPanel>
+          
+          <TableMedicare />
+          </TabPanel>
+        
+        
+      
       <TabPanel value={value} index={1}>
         Item 2 detail
       </TabPanel>

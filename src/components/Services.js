@@ -45,11 +45,7 @@ const Services = (props) => {
   const { classes } = props;
   return (
     <>
-      {/* <div className={classes.root}>
-        Services / Coverage / medicare Advantage -Dental-MADL0977
-      </div>
-      <div className={classes.sub}>
-      Medicare Advantage -Dental-MADL0977</div> */}
+
       <Typography className={classes.root} variant="h5" component="h2">
       Services / Coverage / medicare Advantage -Dental-MADL0977
 </Typography>

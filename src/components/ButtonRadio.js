@@ -8,20 +8,28 @@ const useStyles = makeStyles(
   (theme) =>
     createStyles({
       smallRadioButton: {
-        "& svg": {
-        //   width: "0.7em",
-        //   height: "0.7em",
-        //   verticalAlign: "center",
-       color: '#036FCB'
+      //   "& svg": {
+      //   //   width: "0.7em",
+      //   //   height: "0.7em",
+      //   //   verticalAlign: "center",
+      // //  color: '#036FCB'
 
-        },
+      //   },
+       overrides:{
+        colorPrimary:{
+          '&$checked':{
+            color:'#036FCB'
+          }
+        }
+
+       }
       },
     })
   
 );
 
 function ButtonRadio(props) {
-  // const classes = useStyles();
+  const classes = useStyles();
   const {handleChange}=props;
   
   
@@ -30,7 +38,7 @@ function ButtonRadio(props) {
       <FormControlLabel
         value="Self"
         control={
-          <Radio
+          <Radio classes={{colorPrimary:classes.radio}}
             name="self"
             color="primary"
             style={{ position:'absolute',

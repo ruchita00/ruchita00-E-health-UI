@@ -17,7 +17,6 @@ const style = (theme) => ({
   icon: {
     fontSize: "16px",
     paddig: "4px",
-    // top:'195px',
     lineHeight: "10.67px",
     marginLeft: "5px",
     color: "#828282",
@@ -26,8 +25,6 @@ const style = (theme) => ({
 });
 
 const TabServices = (props) => {
-  // const classes = useStyles();
-
   const [value, setValue] = React.useState(0);
   const { classes } = props;
   const handleTabs = (e, val) => {

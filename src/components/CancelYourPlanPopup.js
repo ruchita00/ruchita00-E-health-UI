@@ -6,9 +6,7 @@ import MuiDialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
-
 import ReasonDropdown from "./ReasonDropdown";
-import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 
 const styles = (theme) => ({
   root: {
@@ -182,7 +180,6 @@ const CancelYourPlanPopup = (props) => {
             height: "26px",
 
             left: "57%",
-            // border: "hidden",
             color: "#FFFFFF",
             background: "#FFFFFF",
             border: "1px solid gray",
@@ -239,14 +236,13 @@ const CancelYourPlanPopup = (props) => {
         </div>
         <ReasonDropdown />
 
-        {/* <Textarea /> */}
-        <TextareaAutosize
-          aria-label="minimum height"
-          style={{ position: "absolute", top: "270px", left: "30px" }}
-          rowsMin={5}
-          minLength
-          placeholder="Write your reason here"
-        />
+
+ <input type="textarea" 
+          name="textValue"
+          style={{position:'absolute',marginLeft:"30px",
+          width:'400px',height:"80px",marginTop:'280px',
+          borrder:'1px solid #f5f5f5', }}
+       placeholder="write your reason here" />
 
         <DialogActions>
           <button

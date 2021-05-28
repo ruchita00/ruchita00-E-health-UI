@@ -7,17 +7,11 @@ const colourStyles = {
   control: (styles, { isDisabled }) => {
     return {
       ...styles,
-      // backgroundColor: "white",
       position: "absolute",
       width: "240px",
       height: "40px",
       left: "300px",
       top: "502px",
-      // bottom:'70px',
-      // border:'1px solid black',
-      // background: "#ffffff",
-      // boxSizing: "border-box",
-    //   boxShadow: "0px 2px 10px rgba(0,0,0,0.08)",
       borderRadius: "3px",
       cursor: isDisabled ? "not-allowed" : "default",
     };

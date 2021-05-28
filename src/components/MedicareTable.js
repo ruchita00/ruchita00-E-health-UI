@@ -16,12 +16,6 @@ const useStyles = makeStyles({
       width:"1024px",
       height:'96px',
       top:'312px',
-      // borderTopWidth:'6',
-      // borderColor:'#E4E4E4',
-      // borderSideWidth:'6',
-      // borderBottomWidth:'6',
-      // borderTopWidth:'1',
-
       left:'360px',
       borderRadius:'16px',
       border:'1px solid #E4E4E4',background:'#FFFFFF'
@@ -32,15 +26,6 @@ const useStyles = makeStyles({
     borderColor:'#E4E4E4',
     borderStyle:'solid'
   },
-  // sorticon: {
-  //   position: "relative",
-  //   width: "97px",
-  //   height: "22px",
-  //   left: "2px",
-  //   top: "-22px",
-  //   fontSize: "24px",
-  //   display: "flex",
-  // },
   sorticon:{
     width:'24px',height:'16px',left:'433px',top:'328px'
               ,fontWeight:'400'

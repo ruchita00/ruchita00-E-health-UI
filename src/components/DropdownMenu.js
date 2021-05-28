@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import chroma from "chroma-js";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Select from "react-select";
@@ -9,7 +9,7 @@ const dot = (color = "#ccc") => ({
 
   ":before": {
     backgroundColor: color,
-    borderRadius: 5,
+    borderRadius: 4,
     content: '" "',
     display: "block",
     marginRight: 8,
@@ -20,21 +20,19 @@ const dot = (color = "#ccc") => ({
   },
 });
 
+
+
 const colourStyles = {
   control: (styles, { isDisabled }) => {
     return {
       ...styles,
-    //   backgroundColor: "white",
       position: "absolute",
       width: "112px",
-    //   height: "40px",
       left: "190px",
       top: "1px",
       marginLeft:'12px',
           background: "#ffffff",
       marginTop:'256px',
-      // border: "1px solid #036FCB",
-      // padding:'1px',
       boxSizing: "border-box",
       boxShadow: "0px 2px 10px rgba(0,0,0,0.08)",
       borderRadius: "8px",
@@ -76,37 +74,32 @@ const colourStyles = {
     return { ...styles, ...dot(data.color) };
   },
 };
-const data = [
-  {
-    value: "1",
-    label: "All Status",
-    color: "white",
-  },
-  {
-    value: "2",
-    label: "Active",
-    color: "#27AE60",
-  },
-  {
-    value: "3",
-    label: "Pending",
-    color: "#F2994A",
-  },
-  {
-    value: "4",
-    label: "Past",
-    color: "#DB0032",
-  },
-];
+
 const Option = (props) => {
-  console.log("props", props);
-  const { data, isSelected, innerRef, innerProps } = props;
+
+  
+  
+  
+  const { data, isSelected, innerRef, innerProps,getCurrentprops } = props;
   const { color, label, value } = data;
+  // const onClick=(selected)=>{
+  //   console.log("selected",selected)
+  // }
+    
+  //     if(isSelected){
+  //       console.log("useEffec",data);
+
+
+  //     }
+    
+  //     console.log('innerRef.current',innerProps)
 
   return (
     <div
       ref={innerRef}
       {...innerProps}
+
+      
       style={{
         display: "flex",
         flexDirection: "row",
@@ -117,7 +110,7 @@ const Option = (props) => {
         alignItems: "center",
       }}
     >
-      {value === "1" ? null : (
+      {value == 1 ? null : (
         <div
           style={{
             height: "10px",
@@ -134,7 +127,11 @@ const Option = (props) => {
   );
 };
 
-const DropdownMenu = () => (
+const DropdownMenu = (props) => {
+  const {data,getCurrentprops} =props;
+  
+
+  return(
   <Select
     classNamePrefix="select"
     defaultValue={data[1]}
@@ -148,8 +145,11 @@ const DropdownMenu = () => (
       DropdownIndicator: () => <ExpandMoreIcon />,
       IndicatorSeparator: () => null,
       Cursor: () => null,
-      Option,
+      Option:(props)=><Option getCurrentprops={getCurrentprops} {...props} />,
     }}
+  
+
   />
-);
+
+  )};
 export default DropdownMenu;

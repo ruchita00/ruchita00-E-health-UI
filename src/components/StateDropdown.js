@@ -48,7 +48,7 @@ const colourStyles = {
 const data = [
   {
     value: "1",
-    label: "State",
+    label: "Select state",
     color:'#ffffff'
     
   },

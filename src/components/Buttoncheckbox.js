@@ -10,7 +10,6 @@ import { createStyles, makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) =>
   createStyles({
     position: {
-      // position:'static',
       left: "10px",
       top: "10px",
     },
@@ -26,27 +25,14 @@ const useStyles = makeStyles((theme) =>
       background: "#036FCB",
       borderRadius: "40px",
     },
-    // text:{
-    //     position: "absolute",
-    // width: "722px",
-    // height: "40px",
-    // left: "270px",
-    // top: "240px",
-    // fontSize: "12px",
-    // lineHeight: "20px",
-    // display: "flex",
-    // alignItems: "center",
-    // color: "#333333",
-    // },
+   
     label:{
         
         fontSize:"14px",
         top:"413px",
         width:'560px',height:'40px',
         left:'392px'
-        // width:'900px'
-        // VerticalAlign:'center',align:'left',
-        // lineHeight:'20px',
+   
     }
   })
 );

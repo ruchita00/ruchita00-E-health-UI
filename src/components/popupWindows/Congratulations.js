@@ -12,11 +12,11 @@ import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 const styles = (theme) => ({
   root: {
     margin: 0,
-    padding: theme.spacing(2),
+    padding: theme.spacing(25),
     position: "absolute",
 
-    width: "150px",
-    height: "24px",
+    width: "560px",
+    height: "376px",
     left: "280px",
     top: "70px",
     fontFamily: "Inter",
@@ -32,20 +32,20 @@ const styles = (theme) => ({
     top: theme.spacing(1),
     color: theme.palette.grey[500],
   },
-  button: {
-    position: "absolute",
-    width: "135px",
-    height: "40px",
-    left: "1241px",
+  
+  buttonOther: {
+    position:'absolute',
+    top:'900px'
+    ,left:'360px',
+    width:'160px',
+    height:'48px',
+    color: "#F2F2F2",
     border: "hidden",
-    right: "0%",
-    top: "168px",
-    bottom: "29.17%",
-    fontFamily: "Inter",
-    color: "#ffffff",
+  
     background: "#036FCB",
-    borderRadius: "50px",
-  },
+    borderRadius: "40px",
+    boxShadow:'0px 0px 0px 0px',
+  }
 });
 
 const DialogTitle = withStyles(styles)((props) => {
@@ -99,8 +99,8 @@ const CongratulationPopup = (props) => {
 
   return (
     <div>
- <button className={classes.button} onClick={handleClickOpen}>
-        Add Coverage
+ <button className={classes.buttonOther} onClick={handleClickOpen}>
+        <span>Proceed</span>
       </button>
       <Dialog
         fullWidth
@@ -158,8 +158,9 @@ const CongratulationPopup = (props) => {
             position: "static",
             width: "440px",
             height: "72px",
-            left: "0px",
-            top: "-10px",
+            left: "60px",
+            top: "176px",
+            marginTop:'24px',
             fontSize: "14px",
             lineHeight: "24px",
             flexGrow: 0,
@@ -181,12 +182,13 @@ const CongratulationPopup = (props) => {
               position: "absolute",
               borderRadius: 50,
               top: "80.76%",
-              width: "135px",
-              height: "35px",
+              width: "160px",
+              height: "48px",
               left: "34.00%",
               border: "hidden",
               color: "#FFFFFF",
               background: "#036FCB",
+      
             
               overflow:'hidden'
             }}

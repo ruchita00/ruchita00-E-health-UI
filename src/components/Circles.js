@@ -10,7 +10,9 @@ import RelationshipToYou from "./RelationshipToYou"
 import StateDropdown from "./StateDropdown"
 import GenderDropdown from "./GenderDropdown";
 // import Button from "@material-ui/core/Button"
-
+// import {Select} from "./Select"
+// import Select from "./"
+import Congratulations from "./popupWindows/Congratulations"
 
 
 const style=(theme)=>({
@@ -304,10 +306,10 @@ left:'632px',fontSize:'12px',width:'119.65px'
               }
             />
           </FormControl>
-          <button className={classes.buttonOther}>
-            <span >Proceed</span>
-          </button>
+          <Congratulations />
 
+       
+{/* <Select /> */}
         </div>
       )}
       </>

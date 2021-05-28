@@ -255,16 +255,6 @@ const PaperVisit = (props) => {
           </div>
         </Box>
       </Paper>
-
-
-
-
-
-
-
-
-
-
     </Container>
   );
 };

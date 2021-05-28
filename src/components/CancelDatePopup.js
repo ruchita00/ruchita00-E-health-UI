@@ -8,7 +8,6 @@ import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
 import CancelYourPlanPopup from "./CancelYourPlanPopup"
 import Date from "./Date"
-// import Button from "@material-ui/core/Button"
 
 const styles = (theme) => ({
   root: {

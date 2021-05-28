@@ -4,21 +4,10 @@ import Papers from "./Papers";
 import PaperVisit from "./PaperVisit"
 
 const style = (theme) => ({
-  root: {
-    // display:'flex',
-    // flexWrap:'wrap',
-    "& > *": {
-      // margin:theme.spacing(1),
-      // width:theme.spacing(2),
-      // height:theme.spacing(15)
-    },
-  },
+
   tab: {
     width:'24',
-    
     paddingTop: theme.spacing(24),
-    // borderBottom: "1px solid gray",
-    // top:'0px'
   },
   label:{
       width:'47px',
@@ -37,7 +26,7 @@ const UtilitiesTab = (props) => {
   };
   return (
     <div className={classes.root}>
-      {/* <AppBar position="static" > */}
+    
       <Tabs         indicatorColor="primary"
  classes={{ root: classes.tab }} 
  value={value} onChange={handleTabs}>
@@ -50,7 +39,7 @@ const UtilitiesTab = (props) => {
         <Tab style={{textTransform: "none"
 }} classes={{label:classes.label}} label="legal" />
       </Tabs>
-      {/* </AppBar> */}
+    
       <TabPanel value={value} index={0} >
       <PaperVisit />      </TabPanel>
       <TabPanel value={value} index={1}>

@@ -5,20 +5,19 @@ import {
   ThemeProvider,
 } from "@material-ui/core";
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, NavLink } from "react-router-dom";
 import { Drawer, List, ListItem, ListItemText } from "@material-ui/core";
 import title from "../src/assets/title.png";
 import Services from "./components/Services";
 import Header from "./components/Header.js";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
-import Home from "./components/Home"
-import Utilities from "./components/Utilities"
-import Circles from "./components/Circles"
-import icon_M from "../src/assets/icon_M.png"
-import Navicon from "../src/assets/Navicon.png"
-import Serv from "../src/assets/Serv.png"
-import Util from "../src/assets/Util.png"
-
+import Home from "./components/Home";
+import Utilities from "./components/Utilities";
+import Circles from "./components/Circles";
+import icon_M from "../src/assets/icon_M.png";
+import Navicon from "../src/assets/Navicon.png";
+import Serv from "../src/assets/Serv.png";
+import Util from "../src/assets/Util.png";
 
 const theme = createMuiTheme({
   palette: {
@@ -27,14 +26,14 @@ const theme = createMuiTheme({
       light: "#f8324526",
     },
     background: {
-      default: "#f5f5f5",
+      default: "#E5E5E5",
+      width:'1265px'
     },
   },
 });
 
-
 const useStyles = makeStyles((theme) => ({
-  drawerPaper: { width: "inherit", },
+  drawerPaper: { width: "inherit" },
   link: { textDecoration: "none", color: theme.palette.text.primary },
   title: {
     position: "absolute",
@@ -42,20 +41,20 @@ const useStyles = makeStyles((theme) => ({
     height: "24px",
     left: "10px",
     marginTop: "48px",
-    marginRight:'54.01px',
-    marginLeft:'40px',
-
+    marginRight: "54.01px",
+    marginLeft: "40px",
   },
 
-  
   img: {
-    position:'absolute',width:'24px',height:'24px',
-    top:'5px',left:'10px'
+    position: "absolute",
+    width: "24px",
+    height: "24px",
+    top: "5px",
+    left: "10px",
   },
   listitemtext: {
     padding: "5px",
-    color:'#4B4B4B',
-  
+    color: "#4B4B4B",
   },
 
   linkelements: {
@@ -64,10 +63,18 @@ const useStyles = makeStyles((theme) => ({
     height: "10px",
     width: "10px",
     marginTop: "90px",
-    marginBottom:"-50px"
+    marginBottom: "-50px",
   },
-  textlink:{
-    position:'absolute',width:'51px',height:'24px',top:'0px',left:'88px'
+  textlink: {
+    position: "absolute",
+    width: "51px",
+    height: "24px",
+    top: "0px",
+    left: "88px",
+  },
+  mainnavactive:{
+    color:'black',
+    fontWeight:'600'
   }
 }));
 function App() {
@@ -83,72 +90,69 @@ function App() {
         <Router>
           <div style={{ display: "flex" }}>
             <Drawer
-              style={{ width: "320px",height:'1024px' }}
+              style={{ width: "320px", height: "1024px" }}
               variant="persistent"
               anchor="left"
               open={true}
-
               classes={{ paper: classes.drawerPaper }}
             >
               <List>
                 <ListItem>
                   <img src={title} alt="title-img" className={classes.title} />
-                
                 </ListItem>
 
-                <Link to="/home" 
-                
-                className={classes.link}>
+                <NavLink to="/home" className={classes.link}>
                   <ListItem button className={classes.linkelements}>
-                    <img
-                      src={icon_M} 
-                      alt="home-img"
-                      className={classes.img}
-                    />
-                    <ListItemText  style={{left:'55px'}}
+                    <img src={icon_M} alt="home-img" className={classes.img} />
+                    <ListItemText
+                      style={{ left: "55px" }}
                       primary={"Home"}
-                className={classes.textlink}  
-                
-                    
+                      className={classes.textlink}
                     />
                   </ListItem>
-                </Link>
-                <Link to="/circles" className={classes.link}>
+                </NavLink>
+                <NavLink to="/circles" className={classes.link}>
                   <ListItem button className={classes.linkelements}>
                     <img
                       src={Navicon}
                       alt="circle-img"
                       className={classes.img}
                     />
-                    <ListItemText style={{left:'55px'}}
+                    <ListItemText
+                      style={{ left: "55px" }}
                       primary={"Circles"}
-                      className={classes.textlink}                    />
+                      className={classes.textlink}
+                    />
                   </ListItem>
-                </Link>
-                <Link to="/services" className={classes.link}>
+                </NavLink>
+                <NavLink to="/services" className={classes.link}>
                   <ListItem button className={classes.linkelements}>
                     <img
                       src={Serv}
                       alt="services-img"
                       className={classes.img}
                     />
-                    <ListItemText style={{left:'55px'}}
+                    <ListItemText
+                      style={{ left: "55px" }}
                       primary={"Services"}
-                      className={classes.textlink}                    />
+                      className={classes.textlink}
+                    />
                   </ListItem>
-                </Link>
-                <Link to="/utilities" className={classes.link}>
+                </NavLink>
+                <NavLink to="/utilities" className="main-nav" activeClassName="mainnavactive" className={classes.link}>
                   <ListItem button className={classes.linkelements}>
                     <img
                       src={Util}
-                      alt="utilities-img" 
+                      alt="utilities-img"
                       className={classes.img}
                     />
-                    <ListItemText style={{left:'55px'}}
+                    <ListItemText
+                      style={{ left: "55px" }}
                       primary={"Utilities"}
-                      className={classes.textlink}                    />
+                      className={classes.textlink}
+                    />
                   </ListItem>
-                </Link>
+                </NavLink>
               </List>
             </Drawer>
             <Switch>

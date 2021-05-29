@@ -14,7 +14,6 @@ const styles = (theme) => ({
     margin: 0,
     padding: theme.spacing(25),
     position: "absolute",
-
     width: "560px",
     height: "376px",
     left: "280px",

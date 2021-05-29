@@ -12,7 +12,8 @@ const style = (theme) => ({
   label:{
       width:'47px',
       height:'24px',
-      verticalAlign:'center'
+      verticalAlign:'center',
+
   }
   
 });

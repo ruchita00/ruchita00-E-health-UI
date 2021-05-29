@@ -23,6 +23,7 @@ const Utilities = (props) => {
       <Typography className={classes.sub} variant="h5" component="h2">
         Services
       </Typography>
+      <hr />
       <UtilitiesTab />
     </div>
   );

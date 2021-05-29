@@ -38,8 +38,8 @@ const HeaderMenu = (props) => {
         boxShadow: "0px 0px 0px 0px",
         height: "80px",
         // width:'1120px',
-        backgroundColor:'#FFFFFF'
-        // border:'1px solid gray'
+        backgroundColor:'#FFFFFF',
+        borderBottom:'1px solid #E4E4E4'
       }}
     >
       <Toolbar>

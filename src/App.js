@@ -18,6 +18,7 @@ import icon_M from "../src/assets/icon_M.png";
 import Navicon from "../src/assets/Navicon.png";
 import Serv from "../src/assets/Serv.png";
 import Util from "../src/assets/Util.png";
+// import "./App.css"
 
 const theme = createMuiTheme({
   palette: {
@@ -34,7 +35,12 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles((theme) => ({
   drawerPaper: { width: "inherit" },
-  link: { textDecoration: "none", color: theme.palette.text.primary },
+  link: { textDecoration: "none", 
+   color: "#BDBDBD",
+   fontSize:'16px'
+   },
+// color:'gray',
+
   title: {
     position: "absolute",
     width: "225.99px",
@@ -90,7 +96,8 @@ function App() {
         <Router>
           <div style={{ display: "flex" }}>
             <Drawer
-              style={{ width: "320px", height: "1024px" }}
+              style={{ width: "320px",
+               height: "1024px" }}
               variant="persistent"
               anchor="left"
               open={true}
@@ -98,12 +105,18 @@ function App() {
             >
               <List>
                 <ListItem>
-                  <img src={title} alt="title-img" className={classes.title} />
+                  <img src={title} alt="title-img" 
+                  className={classes.title} />
                 </ListItem>
 
-                <NavLink to="/home" className={classes.link}>
-                  <ListItem button className={classes.linkelements}>
-                    <img src={icon_M} alt="home-img" className={classes.img} />
+                <NavLink exact to="/home" 
+                activeClassName="active_class"
+                 className={classes.link} 
+                   >
+                  <ListItem button 
+                  className={classes.linkelements}>
+                    <img src={icon_M} alt="home-img"
+                     className={classes.img} />
                     <ListItemText
                       style={{ left: "55px" }}
                       primary={"Home"}
@@ -111,21 +124,28 @@ function App() {
                     />
                   </ListItem>
                 </NavLink>
-                <NavLink to="/circles" className={classes.link}>
+                <NavLink exact to="/circles" 
+                activeClassName="active_class"
+                
+                 className={classes.link}
+                 >
                   <ListItem button className={classes.linkelements}>
                     <img
                       src={Navicon}
                       alt="circle-img"
                       className={classes.img}
                     />
-                    <ListItemText
-                      style={{ left: "55px" }}
-                      primary={"Circles"}
+                    <ListItemText 
+                      style={{ left: "55px",fontSize:"16px" }}
+                      primary={"Circles"} color="primary"
                       className={classes.textlink}
                     />
                   </ListItem>
                 </NavLink>
-                <NavLink to="/services" className={classes.link}>
+                <NavLink exact to="/services"
+                 activeClassName="active_class"
+                  className={classes.link}
+                  >
                   <ListItem button className={classes.linkelements}>
                     <img
                       src={Serv}
@@ -139,7 +159,10 @@ function App() {
                     />
                   </ListItem>
                 </NavLink>
-                <NavLink to="/utilities" className="main-nav" activeClassName="mainnavactive" className={classes.link}>
+                <NavLink exact to="/utilities" 
+                activeClassName="active_class" style={{fontWeight:"bold"}} 
+                className={classes.link}
+                >
                   <ListItem button className={classes.linkelements}>
                     <img
                       src={Util}
